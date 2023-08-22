@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intrusion Detection System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class = "background">
+
+     
+
+    <div class="login">
+	<h1>Intrusion Detection System</h1>
+    <form action="{{ url_for('predict')}}"method="post">
+	 <label for="Duration">loc:</label>
+ <input type="text" name="loc" placeholder="duration" required="required" />
+ <!-- <label for="protocol_type">protocol_type:</label>
+					<select class="input1" id="protocol_type" name="protocol_type" required="required" placeholder="protocol_type">
+						<option value="0">icmp</option>
+						<option value="1">tcp</option>
+						<option value="2">udp</option>
+						 
+					</select></br> -->
+					</br>
+  <label for="v(g)">v(g):</label>
+    <input type="text" name="v(g)" placeholder="v(g)" required="required" />
+ 
+        <label for="ev(g)">ev(g)</label>
+   <input type="text" name="ev(g)" placeholder="ev(g)" required="required" />
+    
+	 <label for="iv(g)">iv(g):</label>
+      <input type="text" name="iv(g)" placeholder="iv(g)" required="required" />
+	   <label for="n">n:</label>
+            <input type="text" name="n" placeholder="n" required="required" />
+			 <label for="v">v:</label>
+              <input type="text" name="v" placeholder="v" required="required" />
+			   <label for="l">l:</label>
+              <input type="text" name="l" placeholder="l" required="required" />
+			  <label for="is_guest_login">d:</label>
+            <input type="text" name="d" placeholder="d" required="required" />
+			 <label for="diff_srv_rate">i:</label>
+              <input type="text" name="i" placeholder="i" required="required" />
+			   <label for="srv_diff_host_rate">e:</label>
+              <input type="text" name="e" placeholder="e" required="required" />
+			  <label for="is_guest_login">b:</label>
+            <input type="text" name="b" placeholder="b" required="required" />
+			 <label for="diff_srv_rate">t:</label>
+              <input type="text" name="t" placeholder="t" required="required" />
+			   <label for="srv_diff_host_rate">lOCode:</label>
+              <input type="text" name="lOCode" placeholder="lOCode" required="required" />
+			   <label for="flag">lOComment:</label>
+             <input type="text" name="lOComment" placeholder="lOComment" required="required" />
+			 <label for="flag">lOBlank:</label>
+             <input type="text" name="lOBlank" placeholder="lOBlank" required="required" />
+              
+			 
+			 
+             
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict label</button>
+    </form>
+   <br>
+   <br>
+   class is {{ prediction_text }}
+  <br>
+  <br>
+<!-- <a href="{{ url_for('chart')}}"button type="submit" class="btn btn-primary btn-block btn-large">Analysis</button></a> -->
+ </div>
+  
+</body>
+</html>
